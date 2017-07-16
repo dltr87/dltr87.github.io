@@ -1,0 +1,180 @@
+// Import Google Font
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+// Typography
+$font-stack:                  "Open Sans","Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Helvetica Neue","Droid Sans",Helvetica,Arial,sans-serif;
+
+// Colors
+
+$color-logo: 			         #DDF2FB;
+$color-data:			         #DEEBF8;
+$color-outline:		         #2CB0E5;
+$color-shadow:			         #C6E5F7;
+$color-hightlight:	         #FDFEFE;
+$color-base:			         #ECF4FB;
+
+$color-btn:                   #3fa8ee;
+$white:                       #fff;
+
+// Spacing
+
+$spacing-small:               5px;
+$spacing-normal:              10px;
+$spacing-large:               20px;
+$spacing-xlarge:              30px;
+$spacing-jumbo:               40px;
+
+$base-border-radius:          3px;
+$btn-border:                  1px solid #1077bc;
+$btn-height:                  40px;
+
+body {
+
+   font-family: $font-stack;
+}
+
+.wrapper {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   box-sizing: border-box;
+   padding: 0 $spacing-large;
+   min-width: 100%;
+
+   .logo{
+      margin-top: $spacing-jumbo;
+   }
+
+   .sso {
+      margin-top: $spacing-jumbo;
+   }
+
+   .cta {
+      margin: $spacing-jumbo 0;
+   }
+}
+
+.btn {
+   background-color: $color-btn;
+   border: $btn-border;
+   border-radius: $base-border-radius;
+   box-shadow: 0 1px 2px 0 rgba(86,179,240,0.5), inset 0 -2px 0 0 rgba(8,60,94,0.2);
+   box-sizing: border-box;
+   color: $white; 
+   font-family: $font-stack;
+   font-weight: 600;
+   font-size: 15px;
+   min-width: $btn-height;
+   min-height: $btn-height;
+   padding: 0 15px;
+
+   &:hover {
+      background-color: lighten($color-btn, 10%);
+   }
+
+   &:active {
+      box-shadow: 0 1px 2px 0 rgba(86,179,240,0.5), inset 0 2px 0 0 rgba(8,60,94,0.2);
+   }
+}
+
+// SSO Illutration
+
+.illustration-sso {
+   width: 300px;
+
+   .anduin-logo {
+    	fill: $color-logo;
+   }
+   
+   .data-inner-circle {
+      fill: $color-data;
+      transform-origin: 150px 110px;
+      animation: clockRotate 24s linear 0s infinite reverse;
+   }
+
+
+   .data-outer-circle {
+      fill: $color-data;
+      transform-origin: 150px 110px;
+      animation: counterClockRotate 30s linear 0s infinite reverse;
+   }
+
+   .circling-line1 {
+      opacity: 0.5;
+      cx: 150px;
+      cy: 110px;
+      r: 61px;
+      fill: none;
+      stroke-width: 1px;
+      stroke: $color-data;
+      stroke-dasharray: 40,100,20,100,30,140;
+      transform-origin: 150px 110px;
+      animation: counterClockRotate 10s linear 0s infinite reverse;
+   }
+
+   .circling-line2 {
+      opacity: 0.5;
+      cx: 150px;
+      cy: 110px;
+      r: 80px;
+      fill: none;
+      stroke-width: 1px;
+      stroke: $color-data;
+      stroke-dasharray: 40,200,50,300;
+      transform-origin: 150px 110px;
+      animation: clockRotate 15s linear 0s infinite reverse;
+   }
+
+   .key {
+      transform-origin: 150px 110px;
+      animation: floating 10s ease-in-out 0s infinite alternate;
+
+      .base-color {
+         fill: $color-base;
+      }
+
+      .key-outline {
+         fill: $color-outline;
+      }
+
+      .shadow {
+         fill: $color-shadow;
+      }
+
+      .hightlight {
+         fill: $color-hightlight;
+      }
+    }
+}
+
+@keyframes clockRotate {
+   100% {
+      transform: rotate(360deg);
+   }
+}
+
+@keyframes counterClockRotate {
+   100% {
+      transform: rotate(-360deg);
+   }
+}
+
+@keyframes floating {
+   0% {
+      transform: translate(24px,50px) rotate(0deg);
+   }
+   
+   33% {
+      transform: translate(26px,90px) rotate(1deg);
+   }
+
+   66% {
+      transform: translate(24px,50px) rotate(0deg);
+   }
+
+   100% {
+      transform: translate(26px,90px) rotate(1deg);
+   }
+}
+
+

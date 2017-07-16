@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+body {
+  font-family: "Open Sans", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Helvetica Neue", "Droid Sans", Helvetica, Arial, sans-serif; }
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0 20px;
+  min-width: 100%; }
+  .wrapper .logo {
+    margin-top: 40px; }
+  .wrapper .sso {
+    margin-top: 40px; }
+  .wrapper .cta {
+    margin: 40px 0; }
+
+.btn {
+  background-color: #3fa8ee;
+  border: 1px solid #1077bc;
+  border-radius: 3px;
+  box-shadow: 0 1px 2px 0 rgba(86, 179, 240, 0.5), inset 0 -2px 0 0 rgba(8, 60, 94, 0.2);
+  box-sizing: border-box;
+  color: #fff;
+  font-family: "Open Sans", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Helvetica Neue", "Droid Sans", Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  min-width: 40px;
+  min-height: 40px;
+  padding: 0 15px; }
+  .btn:hover {
+    background-color: #6ebdf2; }
+  .btn:active {
+    box-shadow: 0 1px 2px 0 rgba(86, 179, 240, 0.5), inset 0 2px 0 0 rgba(8, 60, 94, 0.2); }
+
+.illustration-sso {
+  width: 300px; }
+  .illustration-sso .anduin-logo {
+    fill: #DDF2FB; }
+  .illustration-sso .data-inner-circle {
+    fill: #DEEBF8;
+    transform-origin: 150px 110px;
+    animation: clockRotate 24s linear 0s infinite reverse; }
+  .illustration-sso .data-outer-circle {
+    fill: #DEEBF8;
+    transform-origin: 150px 110px;
+    animation: counterClockRotate 30s linear 0s infinite reverse; }
+  .illustration-sso .circling-line1 {
+    opacity: 0.5;
+    cx: 150px;
+    cy: 110px;
+    r: 61px;
+    fill: none;
+    stroke-width: 1px;
+    stroke: #DEEBF8;
+    stroke-dasharray: 40,100,20,100,30,140;
+    transform-origin: 150px 110px;
+    animation: counterClockRotate 10s linear 0s infinite reverse; }
+  .illustration-sso .circling-line2 {
+    opacity: 0.5;
+    cx: 150px;
+    cy: 110px;
+    r: 80px;
+    fill: none;
+    stroke-width: 1px;
+    stroke: #DEEBF8;
+    stroke-dasharray: 40,200,50,300;
+    transform-origin: 150px 110px;
+    animation: clockRotate 15s linear 0s infinite reverse; }
+  .illustration-sso .key {
+    transform-origin: 150px 110px;
+    animation: floating 10s ease-in-out 0s infinite alternate; }
+    .illustration-sso .key .base-color {
+      fill: #ECF4FB; }
+    .illustration-sso .key .key-outline {
+      fill: #2CB0E5; }
+    .illustration-sso .key .shadow {
+      fill: #C6E5F7; }
+    .illustration-sso .key .hightlight {
+      fill: #FDFEFE; }
+
+@keyframes clockRotate {
+  100% {
+    transform: rotate(360deg); } }
+@keyframes counterClockRotate {
+  100% {
+    transform: rotate(-360deg); } }
+@keyframes floating {
+  0% {
+    transform: translate(24px, 50px) rotate(0deg); }
+  33% {
+    transform: translate(26px, 90px) rotate(1deg); }
+  66% {
+    transform: translate(24px, 50px) rotate(0deg); }
+  100% {
+    transform: translate(26px, 90px) rotate(1deg); } }
+
+/*# sourceMappingURL=main.css.map */
